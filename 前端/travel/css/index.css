@@ -1,0 +1,770 @@
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    background: rgb(165, 158, 158);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    /* 百分比是基于父元素的宽度 */
+}
+
+#menu-bar {
+    color: #fff;
+    border: .1rem solid #fff;
+    border-radius: 0.5rem;
+    font-size: 3rem;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+header .logo {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    /* 首字母大写 */
+}
+
+header .logo span {
+    color: #ffa500;
+    font-size: 3rem;
+}
+
+header .navbar a {
+    display: inline-block;
+    color: #fff;
+    font-size: 2rem;
+    margin: 0.8rem;
+}
+
+header .navbar a:hover {
+    color: skyblue;
+}
+
+header .icons i {
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+header .icons i:hover {
+    color: skyblue;
+}
+
+header .search {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 1.5rem 2rem;
+    background: rgb(165, 158, 158);
+    border-top: .1rem solid rgba(255, 255, 255, .2);
+    align-items: center;
+    display: flex;
+    z-index: 1001;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search #search-bar {
+    width: 100%;
+    padding: 1rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.875rem;
+    border-radius: .5rem;
+}
+
+header .search label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+}
+
+header .search label:hover {
+    color: skyblue;
+}
+
+
+/* 登录 */
+
+.login-in {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 10000;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-in.active {
+    top: 0;
+}
+
+.login-in form {
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    width: 50rem;
+}
+
+.login-in form h3 {
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.login-in form .box {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    margin: .6rem 0;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    text-decoration: none;
+}
+
+.login-in form .box:focus {
+    border-color: skyblue;
+}
+
+.login-in form #remember {
+    margin: 2rem 0;
+}
+
+.login-in form label {
+    font-size: 1.5rem;
+}
+
+.login-in form .btn {
+    display: block;
+    width: 100%;
+}
+
+.login-in form p {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    color: #666;
+}
+
+.login-in form p a {
+    color: #ffa500;
+}
+
+.login-in form p a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.login-in #form-close {
+    position: absolute;
+    top: 13rem;
+    right: 15rem;
+    font-size: 4rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #ffa500;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: .1rem solid #ffa500;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.btn:hover {
+    background-color: rgba(255, 165, 0, .2);
+    color: skyblue;
+}
+
+
+/* home主页 */
+
+section {
+    padding: 2rem 9%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
+}
+
+.home .content {
+    text-align: center;
+}
+
+.home .content h3 {
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .1);
+}
+
+.home .content .btn-1 {
+    display: inline-block;
+    margin-top: 4rem;
+    box-shadow: inset 2px 2px 2px 0px rgb(230 191 191 / 50%), 7px 7px 20px 0px #76bfd0, 4px 4px 5px 0px #989843;
+    color: #1b1c1d;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.home .content .btn-1:hover {
+    background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
+    transition: all 0.3s ease;
+}
+
+.home .content p {
+    font-size: 2.5rem;
+    color: rgb(138, 118, 118);
+    padding: .5rem 0;
+}
+
+.home .img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .controls {
+    padding: 1rem;
+    border-radius: 5rem;
+    background: rgba(0, 0, 0, .7);
+    position: relative;
+    top: 15rem;
+}
+
+.home .controls .img-btn {
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    margin: 0 .5rem;
+}
+
+.home .controls .active {
+    background: skyblue;
+}
+
+.heading {
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.heading span {
+    font-size: 3.5rem;
+    background: rgba(255, 165, 0, .2);
+    color: skyblue;
+    border-radius: .5rem;
+    padding: 2rem 1rem;
+    display: inline-block;
+}
+
+.heading .space {
+    background: none;
+}
+
+.plan .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.plan .row .image {
+    flex: 1 1 40rem;
+}
+
+.plan .row .image img {
+    width: 100%;
+}
+
+.plan .row form {
+    flex: 1 1 40rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.plan .row form .inputBox {
+    padding: .5rem 0;
+}
+
+.plan .row form .inputBox input {
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+}
+
+.plan .row form .inputBox h3 {
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #666;
+}
+
+.scenery .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.scenery .box-container .box {
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+}
+
+.scenery .box-container .box img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* 鼠标悬停放大 */
+
+.scenery .box-container .box img:hover {
+    transform: scale(1.3);
+    overflow: hidden;
+}
+
+.scenery .box-container .box .big {
+    overflow: hidden;
+}
+
+.scenery .box-container .box .content {
+    padding: 2rem;
+}
+
+.scenery .box-container .box .content h3 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.scenery .box-container .box .content h3 i {
+    color: skyblue;
+}
+
+.scenery .box-container .box .content p {
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.scenery .box-container .box .content .stars i {
+    font-size: 1.7rem;
+    color: skyblue;
+}
+
+.scenery .box-container .box .content .price {
+    font-size: 2rem;
+    color: #333;
+    padding-top: 1rem;
+}
+
+.scenery .box-container .box .content .price span {
+    font-size: 1.5rem;
+    color: #666;
+    text-decoration: line-through;
+}
+
+.experience .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.experience .box-container .box {
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.experience .box-container .box i {
+    padding: 1rem;
+    font-size: 5rem;
+    color: skyblue;
+}
+
+.experience .box-container .box h3 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.experience .box-container .box p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.experience .box-container .box:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+}
+
+.food .box-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.food .box-container .box {
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    border: 1rem solid #fff;
+    border-radius: .5rem;
+    flex: 1 1 30rem;
+    height: 25rem;
+    position: relative;
+}
+
+.food .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.food .box-container .box .content {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .7);
+    padding: 2rem;
+    padding-top: 5rem;
+}
+
+.food .box-container .box:hover .content {
+    top: 0;
+}
+
+.food .box-container .box .content h3 {
+    font-size: 2.5rem;
+    color: rgb(189, 155, 155);
+}
+
+.food .box-container .box .content p {
+    font-size: 1.5rem;
+    color: #eee;
+    padding: 2.2rem;
+}
+
+.companions .box {
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.companions .box img {
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.companions .box h3 {
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.companions .box p {
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.companions .box .stars i {
+    font-size: 1.7rem;
+}
+
+
+/* box悬停 */
+
+.container {
+    position: relative;
+    height: 620px;
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.container .card {
+    margin-top: 100px;
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+    transition: .3s ease-in-out;
+}
+
+.container .card:hover {
+    height: 350px;
+}
+
+.container .card .imgBx {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .imgBx img {
+    max-width: 100%;
+    width: 30.25rem;
+    height: 25.125rem;
+    border-radius: 4px;
+}
+
+.container .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.container .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: .3s;
+}
+
+
+/* 联系我吧 */
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.contact .row .image {
+    flex: 1 1 35rem;
+}
+
+.contact .row .image img {
+    width: 100%;
+}
+
+.contact .row form {
+    flex: 1 1 50rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.contact .row form .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .row form .inputBox input,
+.contact .row form textarea {
+    width: 49%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    background: #f7f7f7;
+    text-transform: none;
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+    width: 100%;
+}
+
+
+/* brand */
+
+.brand-container {
+    text-align: center;
+}
+
+.brand-container img {
+    width: 20rem;
+    height: 8rem;
+}
+
+.footer {
+    background-color: #333;
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box {
+    padding: 1rem 0;
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    padding: .7rem 0;
+    color: #fff;
+}
+
+.footer .box-container .box p {
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+}
+
+.footer .box-container .box a:hover {
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    border-top: .1rem solid rgba(255, 255, 255, .2);
+}
+
+.footer .credit span {
+    color: rgb(235, 142, 21);
+}
+
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:991px) {
+    header {
+        padding: 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-bar {
+        display: initial;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: #333;
+        border-top: .1rem solid rgba(255, 255, 255, .2);
+        padding: 1rem 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    header .navbar a {
+        display: block;
+        border-radius: .5rem;
+        padding: 1rem;
+        margin: 1rem 0;
+        background: #222;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+    .heading span {
+        font-size: 2.5rem;
+    }
+    .contact .row form .inputBox input {
+        width: 100%;
+    }
+}

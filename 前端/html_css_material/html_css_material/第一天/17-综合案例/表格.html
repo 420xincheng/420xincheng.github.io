@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table align="center" border="1" cellpadding="20" cellspacing="0" width="500">
+        <tr>
+            <th>姓名</th>     <th>性别</th>      <th>年龄</th>
+        </tr>
+        <tr>
+            <td>刘德华</td>     <td>男</td>      <td>56</td>
+        </tr>
+        <tr>
+            <td>小强</td>     <td>男</td>      <td>18</td>
+        </tr><br>
+    </table>
+    <table align="center" width="500" border="1" cellspacing="0">
+        <thead>
+        <tr>
+            <th>排名</th>
+            <th>关键词</th>
+            <th>趋势</th>
+            <th>今日搜索</th>
+            <th>最近七日</th>
+            <th>相关连接</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>鬼吹灯</td>
+            <td><img src="/C:/Users/新橙/Downloads/xiaoqiang001-html_css_material-master/html_css_material/第二天/down.jpg"></td>
+            <td>456</td>
+            <td>123</td>
+            <td><a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>盗墓笔记</td>
+            <td><img src="/C:/Users/新橙/Downloads/xiaoqiang001-html_css_material-master/html_css_material/第二天/down.jpg"></td>
+            <td>124</td>
+            <td>6254112</td>
+            <td><a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>西游记</td>
+            <td><img src="/C:/Users/新橙/Downloads/xiaoqiang001-html_css_material-master/html_css_material/第二天/up.jpg"></td>
+            <td>212</td>
+            <td>7645</td>
+            <td><a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>东游记</td>
+            <td><img src="/C:/Users/新橙/Downloads/xiaoqiang001-html_css_material-master/html_css_material/第二天/up.jpg"></td>
+            <td>12</td>
+            <td>456562</td>
+            <td><a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>甄嬛传</td>
+            <td><img src="/C:/Users/新橙/Downloads/xiaoqiang001-html_css_material-master/html_css_material/第二天/down.jpg"></td>
+            <td>121</td>
+            <td>2021</td>
+            <td><a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>水浒传</td>
+            <td><img src="/C:/Users/新橙/Downloads/xiaoqiang001-html_css_material-master/html_css_material/第二天/up.jpg"></td>
+            <td>15151</td>
+            <td>151515</td>
+            <td><a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>三国演义</td>
+            <td><img src="/C:/Users/新橙/Downloads/xiaoqiang001-html_css_material-master/html_css_material/第二天/up.jpg"></td>
+            <td>234</td>
+            <td>7894</td>
+            <td><a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a></td>
+        </tr>
+    </tbody>
+    </table>
+    
+    <table border="1" width="500" cellspacing="0" height="300">
+        <tr > <td rowspan="2"> </td> <td colspan="2"> </td></tr>
+        <tr >  <td> </td> <td> </td></tr>
+        <tr> <td> </td><td> </td><td> </td></tr>
+    </table>
+    <h4>你喜欢的食物？</h4>
+    <ul>
+        <li>榴莲</li>
+        <li>榴莲</li>
+        <li>榴莲</li>
+
+    </ul>
+
+    <h4>粉丝排行榜</h4>
+    <ol>
+        <li> 刘德华</li>
+        <li> 白敬亭</li>
+        <li> 杨幂</li>
+    </ol>
+    <dl>
+        <dt>关注我们</dt>
+        <dd>新浪微博</dd>
+        <dd>官方微信</dd>
+        <dd>联系我们</dd>
+    </dl>
+    <form action="xxx.php" method="post">
+        用户名：<input type="text" name="suibian" value="请输入用户名" maxlength="6"><br/>
+        密码：<input type="password" name="pwd" ><br/>
+        性别：男 <input type="radio" name="sex" value="男"> 女 <input type="radio" name="sex" value="女"> 人妖<input type="radio" name="sex" value="人妖">
+        <br/>
+        爱好：吃饭<input type="checkbox" name="hobby"> 睡觉<input type="checkbox" name="hobby"> 打豆豆 <input type="checkbox" name="hobby" checked="checked">躺尸<input type="checkbox" name="hobby"><br/>
+        <br/>
+        <input type="submit" value="免费注册"><be/>
+        <input type="reset" value="重新填写">
+        <input type="button" value="获取短信验证码"> 
+        <br/>
+        上传头像：<input type="file"/><br/>
+    </form>
+
+    <label for="text" > 用户名：</label><input type="text" id="text">
+    <label for="man">男</label> <input type="radio" id="man" name="sex">
+    <label for="woman">女</label> <input type="radio" id="woman" name="sex">
+    <form>
+    籍贯：<select>
+        <option>湖南</option>
+        <option>月球</option>
+        <option selected="selected">火星</option>
+        <option>海王星</option>
+        <option>太阳</option>
+    </select>
+</form>
+</body>
+</html>

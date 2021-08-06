@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head lang="zh-CN">
+		<meta charset="utf-8" />
+		<title>百度一下，你就知道</title>
+		<style>
+		#header{
+		    margin-top: 10px;
+		    margin-right: 5px;
+			text-align: right;
+		}
+		
+		#header a{
+		    font-size: 12px;
+		    color: black;
+		    font-weight: bold;
+		    padding-left: 18px;
+		}
+		
+		a:nth-child(8)
+		{
+		padding-right:18px;
+		}
+		
+		#login{
+		    line-height: 20px;
+		    border: 2px solid #3385ff;
+		    background-color: #3385ff;
+		    color: white;
+		}
+		
+		#content{
+		    height: 450px;
+		    width: 100%;
+		    text-align: center;
+		    line-height: 100px;
+		}
+		
+		#images{
+			text-align: center;
+		}
+		
+		#erweima{
+			position:fixed;
+			left: 10px;
+			bottom: 10px;
+			z-index: 9999;
+		}
+		
+		#erweima_text{
+			position:fixed;
+			left: 0px;
+			bottom: 110px;
+			z-index: 9999;
+			background-color:bisque;
+			color:cornflowerblue;
+		}
+		
+		#search-text{
+		    border: 1.7px solid #b8b8b8;
+		    
+		}
+		
+		#search{
+	        vertical-align:middle;
+		
+		    border: 1.05px solid#4e6ef2;
+		    background-color: #4e6ef2;
+		    color: white;
+		    margin-left: -8px;
+		    font-size: 16px;
+		    width: 100px;
+		}
+		
+		#footer{
+		    text-align: center;
+		    font-size:12px;
+		    color: #999999;
+		    line-height: 22px;
+			position: fixed;
+			left: 0px;
+			bottom: 0px;
+            width: 100%;
+			height: 50px;
+			z-index: 9999;
+		}
+		
+		#footer a{
+		    color: #999999;
+		    margin-left: 20px;
+		}
+		
+	#footer_left a{
+	    margin-left: 0px;
+	}
+		
+		</style>
+	</head>
+	<body>
+		<div id="header">
+		        <a href="https://www.nuomi.com/?cid-002540">糯米</a>
+		        <a href="http://news.baidu.com/">新闻</a>
+		        <a href="https://www.hao123.com">hao123</a>
+		        <a href="https://map.baidu.com/@12725273.29,3558757.28,12z">地图</a>
+				<a href="https://live.baidu.com/">直播</a>
+		        <a href="https://haokan.baidu.com/?sfrom=baidu-top">视频</a>
+		        <a href="http://tieba.baidu.com/f/user/passport?jumpUrl=http://tieba.baidu.com">贴吧</a>
+		        <a href="#">设置</a>
+		        <input type="button" value="登录" id="login"/>
+		    </div>
+			
+			<div id="images">
+					<img src="img/Baidu百度.png" title="百度一下,你就知道" alt="百度一下,你就知道" wifth="418" height="200" />
+				</div>
+				
+			<div id="content">
+				<form action="https://www.baidu.com/s">
+			        <input type="text" name="wd" id="search-text" size=80>
+			        <input type="submit" id="search" value="百度一下" >
+					</from>
+			    </div>
+				
+			<div id="erweima_text">
+				百度APP下载👇
+			</div>
+					
+			<div id="erweima">
+					<img src="img/Download.png" title="百度手机APP下载" alt="百度手机APP下载二维码" wifth="75" height="75"/>
+				</div>
+		
+		<div id="footer">  
+		        <a href="https://www.baidu.com/cache/setindex/index.html">设为主页</a>
+		        <a href="https://home.baidu.com/">关于百度</a>
+		        <a href="https://ir.baidu.com/">About baidu</a>
+		        <a href="https://isite.baidu.com/site/e.baidu.com/d38e8023-2131-4904-adf7-a8d1108f51ef?refer=888">百度营销</a><br>
+		        <span id="footer_left">
+		            ©2021 Baidu<a href="https://www.baidu.com/duty/">使用百度前必读</a>
+		            <a href="https://passport.baidu.com/v2/?login&tpl=service_feedback&u=http%3A%2F%2Fhelp.baidu.com%2Fnewadd%3Fprod_id%3D1%26category%3D4">意见反馈</a>
+					京ICP证030173号
+		        </span>
+		        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001">京公安备11000002000001号</a>
+		    </div>
+	</body>
+</html>

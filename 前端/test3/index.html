@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Bilibili</title>
+    <link rel="stylesheet" href="css/bilibili.css">
+    <script src="js/animate.js"></script>
+
+    <script src="js/index.js"></script>
+
+
+</head>
+
+<body>
+    <!-- 最外边，解决页面缩放 -->
+    <div class="border">
+        <!-- 主体 -->
+        <div class="bilibili">
+            <!-- 导航栏 -->
+            <div class="head" id="0">
+                <!-- 头部的内容 -->
+                <div class="chun">
+                    <div class="animate-banner" id="animate-banner">
+                        <div class="element"><img src="img/i1.png" alt="" data-move-mutiple="16.395"></div>
+                        <div class="element"><img src="img/i2.png" alt="" data-move-mutiple="16.395"></div>
+                        <div class="element"><img src="img/i3.png" alt="" data-move-mutiple="12.145"></div>
+                        <div class="element"><img src="img/i4.png" alt="" data-move-mutiple="3.718"></div>
+                        <div class="element"><img src="img/i5.png" alt="" data-move-mutiple="14.573"></div>
+                        <div class="element"><img src="img/i6.png" alt="" data-move-mutiple="29.277" data-is-opacity="0"></div>
+                        <div class="element"><img src="img/i7.png" alt="" data-move-mutiple="2.342"></div>
+                        <div class="element"><img src="img/i8.png" alt="" data-move-mutiple="1.952"></div>
+                        <div class="element"><img src="img/i9.png" alt="" data-move-mutiple="4.098" data-is-opacity="1"></div>
+                        <div class="element"><img src="img/i10.png" alt="" data-move-mutiple="2.826" data-is-opacity="1"></div>
+                        <div class="element"><img src="img/i11.png" alt="" data-move-mutiple="1.457"></div>
+                        <div class="element"><img src="img/i12.png" alt="" data-move-mutiple="1.092"></div>
+                        <div class="element"><img src="img/i13.png" alt="" data-move-mutiple="1.104"></div>
+                        <div class="element"><img src="img/i14.png" alt="" data-move-mutiple="0.781"></div>
+                        <div class="element"><img src="img/i15.png" alt="" data-move-mutiple="0.546"></div>
+                        <canvas class="canvas" width="1920" height="180" id="canvas"></canvas>
+                    </div>
+                    <script>
+                        // 樱花飘落canvas 
+                        const c = document.getElementById('canvas')
+                        const ctx = c.getContext('2d')
+                        const _w = c.width,
+                            _h = c.height;
+                        const scales = [0.03, 0.04, 0.05, 0.06, 0.07, 0.08];
+                        const slen = scales.length - 1;
+                        const speedX = 2,
+                            speedY = 3;
+                        class flower {
+                            constructor() {
+                                this.x = Math.random() * _w;
+                                this.y = 0;
+                                this.speedX = 0;
+                                this.speedY = 0;
+                                this.scale = 0;
+                                this.width = 0;
+                                this.height = 0;
+                                this.img = null
+                            }
+                            init() {
+                                this.img = new Image()
+                                const f = Math.random() * 10 > 5 ? 1 : 0
+                                const si = Math.floor(Math.random() * slen)
+                                this.speedX = Math.random() * speedX
+                                this.speedY = Math.random() * speedY
+                                this.scale = scales[si]
+                                this.width = this.height = 250 * this.scale
+                                const src = f ? "img/flower1.png" : 'img/flower2.png';
+                                this.img.src = src
+                            }
+                            draw(ctx) {
+                                this.img.onload = () => {
+                                    ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+                                }
+                            }
+                            move(ctx) {
+                                this.x = this.x + this.speedX >= _w ? Math.random() * _w : this.x + this.speedX;
+                                this.y = this.y >= _h ? 0 : this.y + this.speedY;
+                                ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+                            }
+                        }
+                        const flowers = []
+
+                        function start() {
+                            const max = 50;
+                            for (let i = 0; i < max; i++) {
+                                const f = new flower()
+                                f.init()
+                                f.draw(ctx)
+                                flowers.push(f)
+                            }
+                        }
+
+                        function move() {
+                            ctx.clearRect(0, 0, _w, _h)
+                            for (let i = 0; i < flowers.length; i++) {
+                                flowers[i].move(ctx)
+                            }
+                            window.requestAnimationFrame(move);
+                        }
+                        start();
+                        move();
+                    </script>
+                </div>
+                <!-- 头部左侧nav -->
+                <div class="nav-link">
+                    <ul class="nav-link-ul">
+                        <li class="nav-link-item">
+                            <a href="http://www.bilibili.com" target="_blank">
+                                            主站
+                                        </a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="http://www.bilibili.com/anime/" target="_blank">番剧</a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="https://game.bilibili.com/platform/" target="_blank">游戏中心</a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="https://live.bilibili.com" target="_blank">直播</a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="https://show.bilibili.com/platform/home.html?msource=pc_web" target="_blank">会员购</a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="https://manga.bilibili.com/?from=bill_top_mnav" target="_blank">漫画</a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="https://www.bilibili.com/v/game/match/" target="_blank">赛事</a>
+                        </li>
+                        <li class="nav-link-item ">
+                            <a href="https://app.bilibili.com/" target="_blank" class="down">下载APP</a>
+                            <div class="download">
+                                <img src="img/ercode.png" alt="">
+                                <span></span>
+                                <div>扫码下载手机客户端</div>
+                            </div>
+                        </li>
+                        <!-- 二维码 -->
+                        <script>
+                            var down = document.querySelector('.down');
+                            var download = document.querySelector('.download');
+                            down.onmousemove = function() {
+                                download.style.display = "block";
+                            }
+                            down.onmouseout = function() {
+                                download.style.display = "none";
+                            }
+                        </script>
+                    </ul>
+                </div>
+                <!-- 搜索框 -->
+                <div class="nav-search-box">
+                    <div class="search-in">
+                        <input type="text" class="input" placeholder="Type to search">
+                    </div>
+                    <button type="button" class="bt">搜索</button>
+                </div>
+                <!-- 用户模块 -->
+                <div class="nav-user">
+                    <!-- <div class="user-content"> -->
+                    <ul class="user">
+                        <li class="u">大会员</li>
+                        <li class="u">消息</li>
+                        <li class="u">动态</li>
+                        <li class="u">收藏</li>
+                        <li class="u">历史</li>
+                        <li class="u">创作中心</li>
+                        <li><span class="ctr u">投稿</span>
+                            <div class="contribute">
+
+                                <ul>
+                                    <li class="current">
+                                        <div></div> 专栏投稿</li>
+                                    <li>
+                                        <div></div> 音频投稿</li>
+                                    <li>
+                                        <div></div> 贴纸投稿</li>
+                                    <li>
+                                        <div></div> 视频投稿</li>
+                                    <li>
+                                        <div></div> 投稿管理</li>
+                                </ul>
+                                <span id="angle"></span>
+                            </div>
+                        </li>
+                        <!-- 折叠收稿 -->
+                        <script>
+                            var span = document.querySelector('.ctr');
+                            var contri = document.querySelector('.contribute');
+
+                            var lis = contri.querySelectorAll('li');
+                            span.onmousemove = function() {
+                                lis.style.display = "block";
+                            }
+                            span.onmouseout = function() {
+                                lis.style.display = "none";
+                            }
+                            span.onmousemove = function() {
+                                contri.style.display = "block";
+                            }
+                            span.onmouseout = function() {
+                                contri.style.display = "none";
+                            }
+                            for (var i = 0; i < lis.length; i++) {
+                                lis[i].onmousemove = function() {
+                                    for (var i = 0; i < lis.length; i++) {
+                                        lis[i].className = '';
+                                    }
+                                    this.className = 'currrent';
+                                }
+                            }
+                        </script>
+                    </ul>
+                    <!-- </div> -->
+                </div>
+                <!-- logo -->
+                <div class="head-below">
+                    <div class="head-logo">
+                        <img src="img/bilibili春.png" alt="logo">
+                    </div>
+
+                </div>
+            </div>
+            <!-- 导航栏以下部分 -->
+            <div class="mainbody">
+                <div class="left">
+                    <div class="help">
+                        <a href="https://www.bilibili.com/v/customer-service" target="_blank">联系客服</a>
+                    </div>
+                </div>
+                <!-- 中间大部分 -->
+                <div class="middle">
+                    <!-- 各种索引 -->
+                    <div class="b-wrap">
+                        <div class="primary-menu">
+                            <div class="tab1">
+                                <a href="https://www/bilibili.com" class="four">
+                                    <img src="img/shouye.png" alt="首页" width="36px">
+                                    <span>首页</span>
+                                </a>
+                                <a href="https://t.bilibili.com/" target="_blank" class="four">
+                                    <img src="img/shouye.png" alt="首页" width="36px">
+                                    <span>动态</span>
+                                </a>
+                                <a href="https://www.bilibili.com/v/popular/all" target="_blank" class="four">
+                                    <img src="img/shouye.png" alt="首页" width="36px">
+                                    <span>热门</span>
+                                </a>
+                                <a href="https://www.bilibili.com/v/channel" class="four" target="_blank">
+                                    <img src="img/shouye.png" alt="首页" width="36px">
+                                    <span>频道</span>
+                                </a>
+                            </div>
+                            <span class="tab-line"></span>
+                            <div class="tab2">
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                                <a href="https://www.bilibili.com/v/douga/" target="_blank" class="name">动画<div class="num">999+</div></a>
+                            </div>
+                            <span class="tab-line" style="margin: 0px; "></span>
+                            <div class="tab3">
+                                <div class="tab3-t">
+                                    <a href="https://www.bilibili.com/read/home" target="_blank" class="act">
+                                        <img src="img/p2.png" alt="">活动</a>
+                                    <a href="https://www.bilibili.com/read/home" target="_blank" class="act">
+                                        <img src="img/p2.png" alt="">活动</a>
+                                    <a href="https://www.bilibili.com/read/home" target="_blank" class="act">
+                                        <img src="img/p2.png" alt="">活动</a>
+                                </div>
+                                <div class="tab3-b">
+                                    <a href="https://www.bilibili.com/read/home" target="_blank" class="act">
+                                        <img src="img/p2.png" alt="">活动</a>
+                                    <a href="https://www.bilibili.com/read/home" target="_blank" class="act">
+                                        <img src="img/p2.png" alt="">活动</a>
+                                    <a href="https://www.bilibili.com/read/home" target="_blank" class="act">
+                                        <img src="img/p2.png" alt="">活动</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="first-screen">
+                            <div class="screen-left focus">
+                                <!-- 左侧按钮 -->
+                                <a href="javascript:;" class="arrow-l">
+                                &lt;
+                            </a>
+                                <!-- 右侧按钮 -->
+                                <a href="javascript:;" class="arrow-r"> &gt; </a>
+                                <!-- 核心的滚动区域 -->
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src="img/1.webp" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="img/2.webp" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="img/3.webp" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="img/4.webp" alt=""></a>
+                                    </li>
+
+                                </ul>
+                                <!-- 小圆圈 -->
+                                <ol class="circle">
+                                </ol>
+                            </div>
+                            <div class="screen-right">
+
+                                <div class="right-six">
+                                    <div class="sister">
+                                        <img src="img/1.webp" alt="" class="picture">
+                                        <div class="words">
+                                            <p>这可能是最好看的小姐姐</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="info">
+                                        <p>这可能是最好看的小姐姐</p>
+                                    </div>
+                                </div>
+                                <div class="right-six"> <img src="img/1.webp" alt=""> </div>
+                                <div class="right-six"> <img src="img/1.webp" alt=""> </div>
+                                <div class="right-six"> <img src="img/1.webp" alt=""> </div>
+                                <div class="right-six"> <img src="img/1.webp" alt=""> </div>
+                                <div class="right-six"> <img src="img/1.webp" alt=""> </div>
+
+                            </div>
+                        </div>
+                        <div class="extend">
+                            <div class="extend1">
+                                <header class="tuiguang">
+                                    <div class="tui">
+                                        <span>推广</span>
+                                        <div class="abc">
+                                            <a href="#">
+                                                hahahahhaha
+                                            </a>
+                                        </div>
+                                    </div>
+                                </header>
+
+                                <div class="adv1">
+                                    <div class="adver">
+                                        <div class="adver-img">
+                                            <img src="img/1.webp">
+                                        </div>
+                                        <div class="word">
+                                            <p class="words11">
+                                                <span class="a1">广告</span>
+                                                <span>哈——哈——哈——</span>
+                                            </p>
+                                        </div>
+                                        <div class="word-btm">
+                                            <a href="#">脱口秀大会</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="adver">
+                                        <div class="adver-img">
+                                            <img src="img/2.webp">
+                                        </div>
+                                        <div class="word">
+                                            <p class="words11">
+                                                <span>什么笑死，根本笑不死</span>
+                                            </p>
+                                        </div>
+                                        <div class="word-btm">
+                                            <a href="#">吐槽大会</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="adver">
+                                        <div class="adver-img">
+                                            <img src="img/3.webp">
+                                        </div>
+                                        <div class="word">
+                                            <p class="words11">
+                                                <span class="a1">广告</span>
+                                                <span>明星大侦探</span>
+                                            </p>
+                                        </div>
+                                        <div class="word-btm">
+                                            <a href="#">芒果TV</a>
+                                        </div>
+                                    </div>
+                                    <div class="adver">
+                                        <div class="adver-img">
+                                            <img src="img/4.webp">
+                                        </div>
+                                        <div class="word">
+                                            <p class="words11">
+                                                <span>王牌对王牌</span>
+                                            </p>
+                                        </div>
+                                        <div class="word-btm">
+                                            <a href="#">治愈笑容</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="extend2">
+                                <div class="extend2shang">
+                                    <a href="#">观看列表</a>
+                                </div>
+                                <div class="extend2xai">
+                                    <a class="operate-card" href="#">
+                                        <img src="img/2.webp" class="extend2tu">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                        <a href="#">动漫</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

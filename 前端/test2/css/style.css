@@ -1,0 +1,437 @@
+body {
+    background-color: rgb(178, 167, 194);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 控制整个页面的缩放 */
+.coat {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+/* 最外面的边框 */
+.border {
+    background-color: rgb(195, 202, 198);
+    width: 980px;
+    height: 1386px;
+    margin: 0 auto;
+    position: relative;
+}
+/* 头部 */
+.box-header {
+    width: 892px;
+    height: 60px;
+    border-bottom:2px solid #938;
+    position: relative;
+    top: 0;
+    margin-left: 44px;
+    margin-bottom: 30px;
+}
+.header-left {
+    background-color: rgb(134, 18, 18);
+    width: 110px;
+    height: 61px;
+    position: absolute;
+}
+.header-left span {
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+}
+.box-header>span {
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+} 
+/* 中上部分 */
+.box-2 {
+    
+    margin-left: 44px;
+    width: 892px;
+    height: 301px;
+    position: relative;
+
+}
+.box2-left img {
+    
+    width: 641px;
+    height: 301px;
+    position: absolute;
+    z-index: 1;
+
+}
+.img1-left {
+    position: absolute;
+    z-index: 2;
+    background: rgba(167, 13, 13, 0.3);
+    width: 191px;
+    height: 301px;
+    
+}
+ .img1-right {
+    position: absolute;
+    z-index: 2;
+    background: rgba(129, 245, 235, 0.3);
+    width: 191px;
+    height: 301px;
+    left: 454px;
+}
+.box2-right {
+    background-color: white;
+    height:301px ;
+    width: 203px;
+    border-top: 2px solid rgb(221, 112, 112);
+    float: left;
+    position: absolute;
+    right: 0;
+}
+[id*=word] {
+    font-family: "Microsoft YaHei";
+}
+#box2-word1 {
+    font-size: 24px;
+    color: #000000;
+    text-decoration: underline;
+    line-height: 40px;
+}
+#box2-milk {
+    font-size: 12px;
+    font-family: "Kai Ti";
+    color: #676767;
+    line-height: 10px;
+}
+#box2-word2 {
+    font-size: 81px;
+    text-decoration: underline;
+    color: #75b86b;
+    font-style:italic;
+}
+.box2-right-bottom {
+    position: relative;
+    width: 203px;
+    margin-top: 20px;
+}
+.box2-right .word-num1 {
+    font-size: 55px;
+    color: #cc8091;
+    display: inline-block;
+}
+.box2-right .word-num2 {
+    display: inline-block;
+    font-size: 21px;
+    color: #cc8091;
+    position: absolute;
+    top: 20px;
+
+}
+.box2-right .word-num3 {
+    font-size: 12px;
+    color: #cc8091;
+    display: inline-block;
+    position: absolute;
+    top: 48px;
+}
+/* 3个what */
+.box-3 {
+    margin-left: 44px;
+    width: 892px;
+    height: 220px;
+    position: relative;
+}
+.what {
+    width: 250px;
+    height: 210px;
+    display: inline-block;
+}
+.what h3 {
+    text-decoration: underline;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    color: #418c59;
+    margin-top: 20px;
+}
+.what div,
+.when div,
+.how div {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #767777;
+    font-family: "SongTi";
+}
+.when {
+    display: inline-block;
+    width: 250px;
+    height: 220px;
+    /* background-color: pink; */
+    margin-left: 40px;
+
+}
+.when h3 {
+    text-decoration: underline;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    color: #d2994f;
+    margin-top: 40px;
+}
+.how {
+    display: inline-block;
+    width: 181px;
+    height: 220px;
+    /* background-color: pink; */
+    margin-left: 40px;
+    margin-top: -45px;
+    position: absolute;
+    top: 84px;
+}
+.how h3 {
+    text-decoration: underline;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    color: #cc7680;
+    margin-top: 2px;
+}
+.how p {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 25px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.box-3 .how span {
+    font-style:italic;
+    opacity:0.7;
+    color: #cd4a48;
+}
+/* 下面的大盒子4 */
+.box-4 {
+    width: 980px;
+    height: 666px;
+    /* background-color: rgb(211, 205, 206); */
+    margin-top: 30px;
+    position: relative;
+}
+.box4-left {
+    height: 666px;
+    width: 480px;
+    /* background-color: rgb(235, 227, 228); */
+    position: absolute;
+    margin-left: 44px;
+}
+.left-top {
+    width: 415px;
+    height: 175px;
+    position: absolute;
+    border-bottom:2px solid #11456b ;
+}
+.left-top span {
+    font: italic bold 72px "HeiTi";
+    color: #f5e327;
+    letter-spacing: 2px;
+}
+.mi {
+    font: bold 42px "HeiTi";
+    color: #11456b;
+    line-height: 16px;
+    margin-bottom: 5px;
+}
+.quality {
+    font: bold 33px "HeiTi";
+    color:#11456b;
+    margin-top: 10px;
+    position: relative;
+}
+.box4-top-right {
+    width: 412px;
+    height: 275px;
+    position: relative;
+    left: 522px;
+}
+.box4-top-right img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 412px;
+    height: 275px;
+}
+.box4-right-bottom {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    width: 412px;
+    height: 61px;
+    background: rgba(130, 120, 216, 0.3);
+}
+/* 旺仔牛奶字样 */
+.num4 {
+    font: bold 26px "Microsoft Yahei";
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    left:40px;
+    z-index: 3;
+}
+.num5 {
+    position: absolute;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    font-family: "Microsoft Yahei";
+    letter-spacing: 4px;
+    z-index: 3;
+    top: 30px;
+    left: 160px;
+
+}
+.box4-right-bottom .line {
+    width:3px;
+    height: 44px;
+    background-color: #d17214;
+    position: absolute;
+    top: 8px;
+    left: 25px;
+    z-index: 3;
+}
+.box4-bottom-right {
+    background-color: rgba(163, 238, 194, 0.5);
+    width: 415px;
+    height: 381px;
+    position: absolute;
+    right: 44px;
+    bottom: 0;
+}
+.left-bottom {
+    position: absolute;
+    top: 190px;
+    width: 458px;
+    height: 391px;
+}
+.left-bottom p {
+    text-indent: 2em;
+    font-size: 18px;
+    font-family: "SongTi";
+    color: #767777;
+    
+}
+.left-bottom span {
+    font-size: 70px;
+    float:left;
+    font-family: "SongTi";
+    color: #f5e327;
+}
+.left-bottom img {
+    height: 220px;
+    width: 200px;
+    float: right;
+    padding: 20px;
+}
+.adv::before {
+    content: '·◎';
+    font-size: large;
+    color: rgb(170, 19, 163);
+
+}
+.adv {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.see {
+    font-size:16px;
+    color: #5a5b5b;
+    line-height: 20px;
+    font-family: "SongTi";
+    margin-left: 10px;
+}
+.wang {
+    font-size: 12px;
+    color: #5a5b5b;
+    font-family: "SongTi";
+    line-height: 20px;
+    font-style: italic;
+    position: absolute;
+    right: 20px;
+
+}
+.zero {
+    width: 260px;
+    height: 160px;
+    background-color: rgb(165, 110, 179);
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+}
+.zero span {
+    font-size:100px;
+    font-family: "Microsoft YaHei";
+    position: absolute;
+    top: 19px;
+    left: 15px;
+}
+.zero-1 {
+    border-left: solid 2px #ffffff;
+    height: 86px;
+    position: absolute;
+    left: 75px;
+    top: 45px;
+ 
+}
+.zero-2 {
+    font: 21px "HeiTi";
+    font-style: italic;
+    line-height: 24px;
+    margin-left: 10px;
+}
+.zero-3 {
+    font: 12px "HeiTi";
+    line-break: 6px;
+    margin-left: 12px;
+    margin-top: 2px;
+}
+.last {
+    position: absolute;
+    line-height: 16px;
+    font: 14px "HeiTi";
+    color: #5a5b5b;
+    font-style: italic;
+    right: 15px;
+    bottom: 30px;
+}
+.last::before {
+    content: "\201c";
+    font-size: 72px;
+    color: #d45d5c;
+    font-family: "SimHei";
+    position: absolute;
+    top:-12px;
+    left: -68px;
+}
+.last::after {
+    content: "\201d";
+    font-size: 72px;
+    color: #d45d5c;
+    font-family: "SimHei";
+    position: absolute;
+    right: -12px;
+    top: 90px;
+}
+.under {
+    width: 892px;
+    margin-left: 44px;
+    height: 1px;
+    color: #938e8c;
+    margin-top: 30px;
+}
+#hahaha {
+    font-size: 16px;
+    color: rgb(182, 18, 133);
+    font-family: "SimHei";
+    position: absolute;
+    bottom: 28px;
+    right: 44px;
+} 

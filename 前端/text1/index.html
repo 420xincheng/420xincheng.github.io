@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度</title>
+    <style>
+        .top {
+            width: 100%;
+            height:70px;
+        }
+        .top-cont {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            padding: 0 25px;
+            box-sizing: border-box;
+        }
+        .top .left {
+            height: 100%;
+            z-index: 9999;
+            box-sizing: border-box;
+        }
+        .left li {
+            float:left;
+            margin-top: 20px;
+            margin-right: 30px;
+           
+        }
+        
+        .top-more {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            z-index: 9999;
+            background: #333;
+            padding: 10px 0;
+            border-radius: 12px;
+            width: 300px;
+            height: 123px;
+            box-sizing: border-box;
+        }
+        .top-more li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .top-more li a {
+            display: block;
+            width:80px;
+            height: 35px;
+            text-align: center;
+        }
+        .top-more img {
+            width:40px;
+            height:40px;
+        }
+        .top.right {
+            width:400px;
+            height:100%;
+        }
+        .top .right li {
+            float:right;
+            height:40px;
+            width:80px;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+        
+        .top .right li .login:hover {
+            color: #1134c2;
+
+        }
+        .right .set {
+            display: none;
+            position: absolute;
+            top:48px;
+            right:75px;
+            width: 84px;
+            background: #fff;
+            padding: 8px 0;
+            box-shadow: 0 2px 10px 0 rgba(red, green, blue, alpha);
+            border-radius: 12px;
+        }
+        .set li {
+            margin: 3px 16px;
+            padding: 0;
+            height: 40px;
+        }
+        .right .li-set:hover ~ .set {
+            display: block;
+        }
+        .set :hover {
+            display: block;
+        }
+        
+        a {
+            text-decoration: none;
+            color: rgb(78, 74, 49);
+        }
+        a:link {
+            color: #333;
+        }
+        a:hover{
+            color: skyblue;
+        }
+        .logo {
+                text-align: center;
+        }
+       
+        .top .right {
+            float: right;
+            font-size: 20px ;
+        }
+        li {
+            list-style: none;
+            font-size: 20px;
+        }
+        .search {
+            text-align: center;
+            margin-top: 5px;
+        }
+        .main {
+            font-size: 0;
+        }
+        .main .input-search {
+            width: 700px;
+            height: 40px;
+            border: 2px solid #c4c7ce;
+            border-color: gray;
+            vertical-align: top;
+            background: #fff;
+            overflow: hidden;
+            border-radius: 10px 0 0 10px;
+            background-image: url(images/照相机.png);
+            background-size: 24px 20px;
+            background-position: 666px 8px ;
+            background-repeat: no-repeat;
+        }
+        .main .btn-search {
+            background-color: #4e6ef2;
+            font-size: 20px;
+            border: none;
+            color: white;
+            line-height: 45px;
+            width: 108px;
+            height: 46px;
+            vertical-align: middle;
+            border-radius: 0 10px 10px 0;
+        }
+        .set {
+            display: block;
+        }
+        .set a:hover {
+            display: block;
+        }
+        .set li {
+                height: 23px;
+                margin: 3px 16px;
+                padding: 0;
+        } 
+        /* 热搜  */
+        .clearfix:after{
+            content: "";
+            height: 0;
+            clear: both;
+            visibility: hidden;
+            display: inline-block;
+        }
+        .news {
+            height:450px;
+            background-color: rgb(161, 150, 152);
+        }
+        .news .hot {
+            float: right;
+            padding-left: 100px;
+            margin-right: 100px;
+            margin-top: 70px;
+            background-color: skyblue;
+        }
+        .news .hot ul {
+            width: 350px;
+        }
+        .news .hot li {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        /* 新闻列表 */
+        .news-rapper {
+            width: 300px;
+            height: 425px;
+            float: left;
+            margin: 30px auto;
+            border-top: 1px solid #ddd;
+            background-color: skyblue;
+            margin-top: 15px;
+            margin-left: 100px;
+            margin-bottom: 2px;
+        }
+        .news-title {
+            height: 30px;
+            border-top: red;
+            display: inline-block;
+            margin-top: -1px;
+            padding-top: 10px;
+        }
+        .news-title a {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #207bb8;
+        }
+        .news-img {
+            height: 150px;
+            width: 300px;
+        }
+        
+        .news-img .img-title {
+            margin-top: -30px;
+            color: #fff;
+            font-weight: bold;
+            padding-left: 30px;
+        }
+        .news-list {
+            margin-top: 20px;
+            padding-left: 14px;
+        }
+        .news-list li {
+            margin-bottom: 17px;
+            font-size: 20px;
+            color: rgb(194, 142, 142);
+        }
+        .news-list li a:hover {
+            color: red;
+        }
+        .news-list li::before {
+            content: '·◎';
+            color: rgb(92, 64, 64);
+            margin-right: 6px;
+        }
+        
+        /* 二维码 */
+        .icon-mask {
+            position: fixed;
+            background-color:#fff;
+            top: 520px;
+            right: 20px;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+        }
+        
+        .scan-tip {
+            /* display: none; */
+            position: fixed;
+            top:500px;
+            height: 128px;
+            right: 70px;
+            border-radius: 40%;
+            border-bottom: 20px;
+            background-color: white;
+            z-index: 303;
+            box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
+            border-radius: 12px;
+        }
+        .qrcode {
+            width: 88px;
+            height:88px;
+        }
+        .icon-mask .icon {
+            width: 40px;
+            height: 40px;
+            background-size: 40px 40px;
+            background-repeat: no-repeat;
+            
+        }
+        .icon-mask .icon:hover {
+            background-image: url(images/blue.png);
+        }
+        /* 底部样式   */
+        .footer {
+            bottom: 0px;
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            line-height: 2px;
+            color: rgb(125, 134, 130);
+            background-color: tan;
+            text-align: center;
+        }
+        .footer ul {
+            
+            height: 100%;
+            margin:0
+           
+        }
+        .footer ul li {
+            float: left;
+            margin-left: 40px;
+            text-align: center;
+            font-size: 15px;
+            list-style: none;
+        }
+        
+        .footer ul li a:hover {
+            color: #4e6ef2;
+        }
+        
+    </style>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+</head>
+<body>
+ <div class="all">
+        <!-- 顶部 -->
+    <div class="top">
+        <div class="top-cont">
+            <ul class="left">
+               
+                        <li><a href="http://news.baidu.com/" target="_blank"> 新闻</a></li>
+                        <li><a href="https://www.hao123.com/" target="_blank">hao123</a></li>
+                        <li><a href="https://map.baidu.com/" target="_blank">地图</a></li>
+                        <li><a href="https://live.baidu.com/" target="_blank">直播</a></li>
+                        <li><a href="https://haokan.baidu.com/" target="_blank">好看视频</a></li>
+                        <li><a href="https://tieba.baidu.com/" target="_blank">贴吧</a></li>
+                        <li><a href="https://xueshu.baidu.com/" target="_blank">学术</a></li>
+                        <li style="position: relative;" class="top_left_a">
+                            <a href="https://www.baidu.com/more/" target="_blank">更多</a>
+                            <div class="top-more">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="more-show">
+                                            <img src="images/网盘.png" alt="">
+                                            <span>网盘</span>
+                                        </a>
+                                    </li>
+                                    <a href="#" class="more-show">
+                                        <img src="images/贴吧.jpg" alt="">
+                                        <span>贴吧</span>
+                                    </a>
+                                    <a href="#" class="more-show">
+                                        <img src="images/翻译.png" alt="">
+                                        <span>翻译</span>
+                                    </a>
+                                    <a href="#" class="more-show">
+                                        <img src="images/文库.jpg" alt="">
+                                        <span>文库</span>
+                                    </a>
+                                </ul>
+                    
+                            </div>
+                        </li>
+                    
+            </ul>
+             <ul class="right">
+                <!-- 设置 -->
+                <li class="li-set"><a href="#" target="_blank" class="a-set">设置</a></li>
+                <ul class="set">
+                    <li> <a href="#">搜索设置</a></li>
+                    <li> <a href="#">隐私设置</a></li>
+                    <li> <a href="#">关于皮肤</a></li>
+                </ul>
+                <li><a href="https://passport.baidu.com/v6/ucenter?_t=1617360673" target="_blank" class="login">注册</a></li>  
+            </ul> 
+        </div>
+    </div>
+    <hr>
+    <!-- logo和搜索 -->
+    <div class="main">
+        <p class="logo" >
+            <img src="images/百度logo.gif" width="400" height="200">
+        </p>
+        
+        <div class="search" >
+            <input type="text" class="input-search" > <button class="btn-search">百度一下</button>
+        </div>
+    </div>
+    <!-- 热搜榜 -->
+    <div class="news clearfix" style="clear: both;" >
+        <div class="hot">
+                <div style="font-size: 25px;">百度热搜</div>
+            <ul>
+                <li><span style="color: rgb(204, 11, 11);">1</span> <a href="https://baijiahao.baidu.com/s?id=1695922197766223140&wfr=spider&for=pc" target="_blank" >苏伊士运河货轮搁浅系船长错误操作</a></li>
+                <li><span style="color:rgb(241, 158, 103);">2</span> <a href="https://baijiahao.baidu.com/s?id=1695882750500410102&wfr=spider&for=pc" target="_blank">新疆反恐纪录片:有厅官接触暴恐头目</a></li>
+                <li><span style="color:rgba(255, 166, 0, 0.829);">3</span> <a href="https://baijiahao.baidu.com/s?id=1695896710976434942&wfr=spider&for=pc"  target="_blank">台铁列车发生出轨事故:多人无生命征象</a></li>
+                <li><span style="color:rgb(139, 233, 62);">4</span> <a href="https://baijiahao.baidu.com/s?id=1695915362042199203&wfr=spider&for=pc" target="_blank">20余国驻华使节正在新疆参观访问</a></li>
+                <li><span style="color:rgb(23, 209, 163);">5</span> <a href="https://baijiahao.baidu.com/s?id=1695897208107791524&wfr=spider&for=pc" target="_blank">清明假期全国天气预报地图</a></li>
+                <li><span style="color:rgb(98, 96, 99);">6</span> <a href="https://haokan.baidu.com/v?pd=bjh&vid=13074464196874986789&fr=bjhauthor&type=video" target="_blank">地球漫游计划</a></li>
+                <li><span style="color:rgb(98, 96, 99);">7</span> <a href="https://baijiahao.baidu.com/s?id=1695898827243912327&wfr=spider&for=pc" target="_blank">王凯任河南副省长、代理省长</a></li>
+                <li><span style="color:rgb(98, 96, 99);">8</span> <a href="https://baijiahao.baidu.com/s?id=1695906513742089108&wfr=spider&for=pc" target="_blank">张文宏:瑞丽疫情透露几个关键信息</a></li>
+                <li><span style="color:rgb(98, 96, 99);">9</span> <a href="https://haokan.baidu.com/v?pd=wisenatural&vid=3915799814304920733" target="_blank">塞尔维亚总统采访中力挺中国</a></li>
+                <li><span style="color:rgb(98, 96, 99);">10</span> <a href="https://haokan.baidu.com/v?pd=wisenatural&vid=3919864068908642729" target="_blank">深圳茶颜悦色已排队3万号</a></li>
+            </ul>
+        </div>
+        
+            <!-- 新闻列表的外部 -->
+        <div class="news-rapper "  >
+            <h2 class="news-title">
+                <a href="#">时事</a>
+            </h2>
+            <!-- 图片所在容器 -->
+            <div class="news-img">
+           
+                <a href="#">
+                    <img src="images/1.jpeg" alt="孟晚舟" style="width: 295px;height: 150px;">
+                    <h3 class="img-title">
+                        <a href="https://baijiahao.baidu.com/s?id=1696009012541568004&wfr=spider&for=pc" target="_blank">美国没有资格抓孟晚舟！</a> 
+                    </h3>
+                </a>
+               
+            </div>
+            <!-- 新闻列表 -->
+            <ul class="news-list">
+                <li>
+                    <a href="https://news.gmw.cn/2021-04/03/content_34737859.htm" target="_blank">歌剧《红船》首演</a>
+                </li>
+                <li>
+                    <a href="http://finance.people.com.cn/n1/2021/0402/c1004-32068275.html
+                    " target="_blank">话说新农村</a>
+                </li>
+                <li>
+                    <a href="http://paper.people.com.cn/rmrb/html/2021-04/03/nw.D110000renmrb_20210403_9-01.htm" target="_blank">西安国际港站揭牌启用</a>
+                </li>
+                <li>
+                    <a href="http://finance.people.com.cn/n1/2021/0326/c1004-32061108.html" target="_blank">管住“乱伸的手”！</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- 二维码 -->
+    <div class="icon-mask">
+        <img class="icon" src="images/grey.png" alt="grey">
+       
+    </div>
+    <div class="scan-tip">
+        <div class="scan-text">
+                <div>扫码下载百度APP</div>
+                <div>你想要的&nbsp;&nbsp;我都有&nbsp;&nbsp;&nbsp;</div>
+        </div>
+        <div>
+            <img  class="qrcode" src="images/百度.png" alt="二维码" title="扫我吧">
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="footer">
+        <ul >
+            <li> <a href="https://www.baidu.com/cache/setindex/index.html" >设为首页</a></li>
+            <li> <a href="https://home.baidu.com/" >关于百度</a></li>
+            <li> <a href="https://www.baidu.com/duty/" >使用百度前必读</a></li>
+            <li> <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" >京公网安备11000002000001号</a></li>
+            <li> <a href="https://help.baidu.com/">帮助中心</a></li>
+            <li> <a href="https://isite.baidu.com/site/e.baidu.com/d38e8023-2131-4904-adf7-a8d1108f51ef?refer=888">百度营销</a></li>
+            <li>  <a href="http://help.baidu.com/newadd?prod_id=1&category=4" >意见反馈</a></li>  
+            <li>©2021 Baidu </li>  
+            <li>(京)-经营性-2017-0020</li>        
+        </ul>
+        
+    </div>
+ </div>
+   
+    
+</body>
+</html>
