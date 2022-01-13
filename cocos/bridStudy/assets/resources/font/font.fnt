@@ -1,0 +1,40 @@
+info face="Arial" size=32 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=32 base=26 scaleW=256 scaleH=256 pages=1 packed=1 alphaChnl=0 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="font.png"
+chars count=36
+char id=48   x=176   y=35    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=49   x=242   y=35    width=13    height=34    xoffset=0     yoffset=0     xadvance=13    page=0  chnl=15
+char id=50   x=176   y=70    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=51   x=156   y=0     width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=52   x=178   y=0     width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=53   x=200   y=0     width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=54   x=222   y=0     width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=55   x=60    y=0     width=24    height=34    xoffset=0     yoffset=0     xadvance=24    page=0  chnl=15
+char id=56   x=0     y=35    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=57   x=22    y=35    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=65   x=44    y=35    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=66   x=66    y=35    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=67   x=88    y=35    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=68   x=110   y=35    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=69   x=21    y=105   width=20    height=34    xoffset=0     yoffset=0     xadvance=20    page=0  chnl=15
+char id=70   x=0     y=105   width=20    height=34    xoffset=0     yoffset=0     xadvance=20    page=0  chnl=15
+char id=71   x=132   y=35    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=72   x=154   y=35    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=73   x=242   y=70    width=13    height=34    xoffset=0     yoffset=0     xadvance=13    page=0  chnl=15
+char id=74   x=198   y=35    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=75   x=220   y=35    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=76   x=0     y=70    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=77   x=0     y=0     width=29    height=34    xoffset=0     yoffset=0     xadvance=29    page=0  chnl=15
+char id=78   x=22    y=70    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=79   x=44    y=70    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=80   x=66    y=70    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=81   x=109   y=0     width=23    height=34    xoffset=0     yoffset=0     xadvance=23    page=0  chnl=15
+char id=82   x=88    y=70    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=83   x=110   y=70    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=84   x=133   y=0     width=22    height=34    xoffset=0     yoffset=0     xadvance=22    page=0  chnl=15
+char id=85   x=132   y=70    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=86   x=154   y=70    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=87   x=30    y=0     width=29    height=34    xoffset=0     yoffset=0     xadvance=29    page=0  chnl=15
+char id=88   x=198   y=70    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=89   x=220   y=70    width=21    height=34    xoffset=0     yoffset=0     xadvance=21    page=0  chnl=15
+char id=90   x=85    y=0     width=23    height=34    xoffset=0     yoffset=0     xadvance=23    page=0  chnl=15
